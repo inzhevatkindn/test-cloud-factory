@@ -19,6 +19,7 @@ const QuotesScreen = (props: IProps) => {
         const fetchTickers = async () => {
             try {
                 await store?.quotes.returnTicker();
+                setHasError(false);
                 setFirstLoading(false);
             } catch (error) {
                 setHasError(true);
